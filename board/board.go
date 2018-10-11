@@ -6,7 +6,7 @@ import (
 )
 
 const (
-    BOARD_SIZE = 50
+    BOARD_SIZE = 30
 )
 
 func NextStep(b [BOARD_SIZE]int) [BOARD_SIZE]int {

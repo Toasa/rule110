@@ -5,7 +5,8 @@ import (
 )
 
 const (
-    BOARD_SIZE = 50
+    // BOARD_SIZE = 30
+    PRINT_LOOP_NUM = 50
 )
 
 func main() {
@@ -13,13 +14,13 @@ func main() {
     // seed = 25899906842524
     // b := MakeBoard(seed)
 
-    b := [BOARD_SIZE]int{}
+    b := [board.BOARD_SIZE]int{}
 
     // 右端だけbitを立てる
-    b[BOARD_SIZE - 1] = 1
-    
+    b[board.BOARD_SIZE - 1] = 1
+
     board.PrintBoard(b)
-    for i:= 0; i < 500; i++ {
+    for i:= 0; i < PRINT_LOOP_NUM; i++ {
         b = board.NextStep(b)
         board.PrintBoard(b)
     }
